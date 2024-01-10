@@ -1,5 +1,15 @@
 #navBar{
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 40px;
     color:white;
+}
+
+#sideBar{
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 300px;
+    height: 525px;
+    border-right: 3px solid black;  
+    background-color: grey;
+    color: aliceblue;
 }
