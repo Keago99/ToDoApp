@@ -4,7 +4,13 @@
     color:white;
 }
 
+#mainScreen{
+    display:flex;
+}
+
 #sideBar{
+    display: flex;
+    flex-direction: column;
     padding-top: 10px;
     padding-left: 15px;
     width: 300px;
@@ -12,4 +18,14 @@
     border-right: 3px solid black;  
     background-color: grey;
     color: aliceblue;
+}
+
+#toDoArea{
+    margin: 100px;
+}
+
+#modalButton{
+    text-align: center;
+    height:100px;
+    width: 250px;
 }
