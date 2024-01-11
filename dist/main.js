@@ -1,1 +1,1 @@
-console.log("test run");
+(()=>{"use strict";console.log("test run"),console.log({title:"my first Todo!",description:"This is an important task",dueDate:"15/04/2025",priority:"High"})})();

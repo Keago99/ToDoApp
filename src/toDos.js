@@ -4,11 +4,8 @@ const toDoFactory = (title, description, dueDate, priority) => {
     return {title, description, dueDate, priority};
 };
 
-// 
-function addTodo(title, description, dueDate, priority){
-    newTodo = toDoFactory(title, description, dueDate, priority);
-    return newTodo;
-};
+
+const basicTodo = toDoFactory("my first Todo!", "This is an important task", "15/04/2025", "High");
 
 
-export {toDoFactory, addTodo};
+export {toDoFactory, basicTodo};
