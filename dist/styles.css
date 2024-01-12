@@ -30,3 +30,18 @@
 #hiddenProjAdd{
     display: none;
 }
+
+.lowPriority{
+    color: grey(245, 245, 245, 0.705) !important;
+    background-color: green !important;
+}
+
+.mediumPriority{
+    color: grey(245, 245, 245, 0.705) !important;
+    background-color: yellow !important;
+}
+
+.highPriority{
+    color: grey(245, 245, 245, 0.705) !important;
+    background-color: red !important;
+}

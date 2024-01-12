@@ -23,9 +23,9 @@
             <div id="projectList">
               <button type="button" class="btn btn-primary" id="addProjButton">Add new Project</button>
               <div id="hiddenProjAdd">
-                <input type="text" maxlength="24">
+                <input type="text" maxlength="24" id="inputText">
                 <button type="button" class="btn btn-success" >Add Project</button>
-                <button type="button" class="btn btn-danger">Cancel</button>
+                <button type="button" class="btn btn-danger" id="cancelButton">Cancel</button>
               </div>
 
             </div>
@@ -43,13 +43,24 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <div class="edit-popup__date-title">Due Date:</div>
                 <input class="edit-popup__date-input" type="date" required="" value="2024-01-10">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Priority">
+                  Priority:
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item lowPriority" href="#">Low</a></li>
+                  <li><a class="dropdown-item mediumPriority" href="#">Medium</a></li>
+                  <li><a class="dropdown-item highPriority" href="#">High</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
