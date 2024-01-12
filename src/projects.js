@@ -21,4 +21,22 @@ function loadProjects(){
     console.log(basicTodo);
 }
 
-export {loadProjects, starterProject, AllProjects};
+function showProjAdd(){
+    const projectAdd = document.getElementById("hiddenProjAdd");
+    const addProjButton = document.getElementById("addProjButton");
+
+    addProjButton.style.display = "none";
+    projectAdd.style.display = "block";
+
+}
+
+function projListeners(){
+    const addProjButton = document.getElementById("addProjButton");
+
+    console.log("this works!");
+    addProjButton.addEventListener("click", () => {
+        showProjAdd();
+    })
+}
+
+export {projListeners, loadProjects, starterProject, AllProjects};

@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("test run"),console.log({title:"my first Todo!",description:"This is an important task",dueDate:"15/04/2025",priority:"High"})})();
+(()=>{"use strict";!function(){const t=document.getElementById("addProjButton");console.log("this works!"),t.addEventListener("click",(()=>{!function(){const t=document.getElementById("hiddenProjAdd");document.getElementById("addProjButton").style.display="none",t.style.display="block"}()}))}()})();
