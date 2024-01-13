@@ -31,17 +31,17 @@
     display: none;
 }
 
-.lowPriority{
+#lowPriority{
     color: grey(245, 245, 245, 0.705) !important;
     background-color: green !important;
 }
 
-.mediumPriority{
+#mediumPriority{
     color: grey(245, 245, 245, 0.705) !important;
     background-color: yellow !important;
 }
 
-.highPriority{
+#highPriority{
     color: grey(245, 245, 245, 0.705) !important;
     background-color: red !important;
 }

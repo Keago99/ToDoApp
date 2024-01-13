@@ -1,5 +1,5 @@
+import {addPriorityOnClicks} from "./modal";
 import {projListeners} from "./projects";
-
 //This is the entry point
 
 
@@ -7,3 +7,4 @@ import {projListeners} from "./projects";
 
 
 projListeners();
+addPriorityOnClicks();
