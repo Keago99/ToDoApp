@@ -13,10 +13,17 @@ function projectFactory(projectName){
     return projectName;
 };
 
+function addProjects(){
+    const inputText = document.getElementById("inputText").value;
+    console.log("the input is" + inputText.t);
+    const addedProject = new projectFactory(inputText);
+    AllProjects.push(addedProject);
+}
+
 // A function to update the amount of projects
 function updateProjects(){
     const projList = document.getElementById("nameOfProjects");
-    
+    projList.innerHTML = "";
     
     for (let i = 0; i < AllProjects.length; i++){
         let item = document.createElement("div");
@@ -58,7 +65,7 @@ function cancelProjAdd(){
 
 
 // Adding all eventlisteners that have to do with the project class.
-function projListeners(){
+function projAdditionListeners(){
     const addProjButton = document.getElementById("addProjButton");
     const cancelButton = document.getElementById("cancelButton");
 
@@ -70,10 +77,17 @@ function projListeners(){
     cancelButton.addEventListener("click", () => {
         cancelProjAdd();
     })
-
-
-
-    
 }
 
-export {projListeners, loadProjects, updateProjects, starterProject, AllProjects};
+function addProjectListenerButton(){
+    const addNewProj = document.getElementById("addNewProj");
+
+    addNewProj.addEventListener("click", () => {
+        addProjects();
+        updateProjects();
+    })
+
+}
+
+
+export {addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects};

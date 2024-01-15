@@ -1,11 +1,12 @@
 import {addPriorityOnClicks} from "./modal";
-import {projListeners, updateProjects} from "./projects";
+import {addProjectListenerButton, projAdditionListeners, updateProjects} from "./projects";
 //This is the entry point
 
 
 
 
 
-projListeners();
+projAdditionListeners();
 addPriorityOnClicks();
 updateProjects();
+addProjectListenerButton();
