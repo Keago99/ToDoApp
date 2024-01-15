@@ -1,19 +1,30 @@
 
 import {basicTodo} from "./toDos";
 
-const starterProject = [basicTodo];
+const starterProject = new projectFactory("fart");
 
 const AllProjects = [starterProject];
 
 
 // A method for creating project objects
 function projectFactory(projectName){
+    this.projectName = projectName;
+    this.tasks = [];
     return projectName;
-}
+};
 
 // A function to update the amount of projects
 function updateProjects(){
+    const projList = document.getElementById("nameOfProjects");
+    
+    
+    for (let i = 0; i < AllProjects.length; i++){
+        let item = document.createElement("div");
+        item.className = ("projItem");
+        item.innerText = (AllProjects[i].projectName);
 
+        projList.appendChild(item);
+    }
 }
 
 // A function to load the projects, it will reference the AllProjects Arraylist
@@ -65,4 +76,4 @@ function projListeners(){
     
 }
 
-export {projListeners, loadProjects, starterProject, AllProjects};
+export {projListeners, loadProjects, updateProjects, starterProject, AllProjects};

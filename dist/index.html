@@ -21,6 +21,9 @@
         <div id="sideBar">
             <h3>Projects</h3>
             <div id="projectList">
+              <div id="nameOfProjects">
+
+              </div>
               <button type="button" class="btn btn-primary" id="addProjButton">Add new Project</button>
               <div id="hiddenProjAdd">
                 <input type="text" maxlength="24" id="inputText">
@@ -43,11 +46,14 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Pizza</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Add new Todo Task</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <h5>Todo Name</h5>
+                <textarea class="form-control" id="todoName" rows="1"></textarea>
+                <h5>Todo Description</h5>
+                <textarea class="form-control" id="todoDescription" rows="1"></textarea>
                 <div class="edit-popup__date-title">Due Date:</div>
                 <input class="edit-popup__date-input" type="date" required="" value="2024-01-10">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Priority">
