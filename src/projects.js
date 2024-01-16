@@ -1,7 +1,7 @@
 
 import {basicTodo} from "./toDos";
 
-const starterProject = new projectFactory("fart");
+const starterProject = new projectFactory("starterProject");
 
 const AllProjects = [starterProject];
 
@@ -15,9 +15,11 @@ function projectFactory(projectName){
 
 function addProjects(){
     const inputText = document.getElementById("inputText").value;
-    console.log("the input is" + inputText.t);
-    const addedProject = new projectFactory(inputText);
-    AllProjects.push(addedProject);
+    if (inputText != ""){
+        const addedProject = new projectFactory(inputText);
+        AllProjects.push(addedProject);
+    }
+
 }
 
 // A function to update the amount of projects
@@ -85,6 +87,7 @@ function addProjectListenerButton(){
     addNewProj.addEventListener("click", () => {
         addProjects();
         updateProjects();
+        cancelProjAdd();
     })
 
 }
