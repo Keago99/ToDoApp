@@ -53,3 +53,7 @@
 #toDoArea{
     margin: 20px;
 }
+
+.activeProject{
+    background-color: blue;
+}

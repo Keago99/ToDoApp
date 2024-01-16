@@ -13,6 +13,7 @@ function projectFactory(projectName){
     return projectName;
 };
 
+// A function to add the projects to the AllProjects Arraylist
 function addProjects(){
     const inputText = document.getElementById("inputText").value;
     if (inputText != ""){
@@ -20,6 +21,15 @@ function addProjects(){
         AllProjects.push(addedProject);
     }
 
+}
+
+function activeOnClickProject(){
+    const projectItems = document.querySelectorAll(".projItem");
+    for (let i = 0; i <projectItems.length; i++ ){
+        projectItems[i].addEventListener("click", () => {
+            console.log("this is project" + [i]);
+        })
+    }
 }
 
 // A function to update the amount of projects
@@ -33,7 +43,9 @@ function updateProjects(){
         item.innerText = (AllProjects[i].projectName);
 
         projList.appendChild(item);
+
     }
+    activeOnClickProject();
 }
 
 // A function to load the projects, it will reference the AllProjects Arraylist
@@ -81,6 +93,8 @@ function projAdditionListeners(){
     })
 }
 
+// Adding the ProjectListenerButton to the Add Project green button NB: This should be bundled into
+// A bigger sort of AddListener function.
 function addProjectListenerButton(){
     const addNewProj = document.getElementById("addNewProj");
 
@@ -93,4 +107,6 @@ function addProjectListenerButton(){
 }
 
 
-export {addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects};
+
+
+export {activeOnClickProject, addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects};
