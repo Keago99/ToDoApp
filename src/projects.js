@@ -4,6 +4,7 @@ import {basicTodo} from "./toDos";
 const starterProject = new projectFactory("starterProject");
 
 const AllProjects = [starterProject];
+var ActiveProject  = AllProjects[0];
 
 
 // A method for creating project objects
@@ -27,7 +28,12 @@ function activeOnClickProject(){
     const projectItems = document.querySelectorAll(".projItem");
     for (let i = 0; i <projectItems.length; i++ ){
         projectItems[i].addEventListener("click", () => {
-            console.log("this is project" + [i]);
+            for (let i = 0; i < projectItems.length; i++){
+                projectItems[i].classList.remove("activeProject");
+            }
+            projectItems[i].classList.add("activeProject");
+            ActiveProject = AllProjects[i];
+            console.log("The active project is number: " + [i]);
         })
     }
 }
