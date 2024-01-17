@@ -1,24 +1,23 @@
-
 import {basicTodo} from "./toDos";
 
-const starterProject = new projectFactory("starterProject");
+const starterProject = new Project("starterProject");
 
 const AllProjects = [starterProject];
-var ActiveProject  = AllProjects[0];
+let ActiveProject  = 0;
 
 
 // A method for creating project objects
-function projectFactory(projectName){
+function Project(projectName, tasks = []){
     this.projectName = projectName;
-    this.tasks = [];
-    return projectName;
-};
+    this.tasks = tasks;
+}
+
 
 // A function to add the projects to the AllProjects Arraylist
 function addProjects(){
     const inputText = document.getElementById("inputText").value;
     if (inputText != ""){
-        const addedProject = new projectFactory(inputText);
+        const addedProject = new Project(inputText);
         AllProjects.push(addedProject);
     }
 
@@ -57,6 +56,8 @@ function updateProjects(){
 // A function to load the projects, it will reference the AllProjects Arraylist
 function loadProjects(){
     console.log(basicTodo);
+    const wut = Array.isArray(AllProjects[0].tasks);
+    console.log(wut);
 }
 
 // A function to show the hidden project add form with its accept and cancel buttons
@@ -115,4 +116,4 @@ function addProjectListenerButton(){
 
 
 
-export {activeOnClickProject, addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects};
+export {activeOnClickProject, addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects, ActiveProject};

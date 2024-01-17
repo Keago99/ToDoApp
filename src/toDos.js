@@ -1,49 +1,13 @@
-import { AllProjects } from "./projects";
+import { AllProjects, ActiveProject } from "./projects";
 
 
-// A factory for Todo objects
-const toDoFactory = (title, description, dueDate, priority) => {
-    
+// Constructor for Todo
+function toDo(title, description, dueDate, priority){
+    this.title = title;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority =priority;
 
-    
-    // Getters and Setters to ensure encapsulation.
-    return {
-        set title(title){
-            this.title = title
-        },
-
-        get title(){
-            return title;
-        },
-
-        set description(description){
-            this.description = description;
-        },
-
-        get description(){
-            return description;
-        },
-
-        set dueDate(dueDate){
-            this.dueDate = dueDate;
-        },
-
-        get dueDate(){
-            return dueDate;
-        },
-
-        set priority(priority){
-            this.priority = priority;
-        },
-
-        get priority(){
-            return priority;
-        }
-
-    };
-
-
-    
 }
 
 
@@ -57,7 +21,16 @@ function createTaskDiv(){
 // Creates a new task from the modal, this will actually be called in the modal class since it is tied to
 // that buttons logic, but because its primarily associated with the ToDo it will be housed here.
 function createTask(){
+    let title = document.getElementById("todoName").value;
+    let description = document.getElementById("todoDescription").value;
+    let dueDate = document.getElementById("todoDueDate").value;
+    let priority = document.getElementById("Priority").innerText;
 
+    const newTask = new toDo(title, description, dueDate, priority);
+    console.log(newTask);
+    console.log(ActiveProject);
+    AllProjects[ActiveProject].tasks.push(newTask);
+    console.log(AllProjects[ActiveProject].tasks[0]);
 }
 
 
@@ -70,7 +43,7 @@ function loadTasks(){
 
 
 
-const basicTodo = toDoFactory("my first Todo!", "This is an important task", "15/04/2025", "High");
+const basicTodo = new toDo("my first Todo!", "This is an important task", "15/04/2025", "High");
 
 
-export {toDoFactory, basicTodo};
+export {toDo, createTask, basicTodo};

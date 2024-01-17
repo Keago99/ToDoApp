@@ -1,5 +1,5 @@
 // This is where all the javascript relating to the modal will go.
-
+import {createTask} from "./toDos";
 // Adds the onclick methods for the Modal items, specifically the "Low/Medium/High" priority
 function addPriorityOnClicks(){
     const priorityButton = document.getElementById("Priority");
@@ -29,4 +29,12 @@ function addPriorityOnClicks(){
     }
 }
 
-export {addPriorityOnClicks};
+function createNewTaskOnClick(){
+    const createNewTaskButton = document.getElementById("createNewTask");
+
+    createNewTaskButton.addEventListener("click", () => {
+        createTask();
+    })
+}
+
+export {addPriorityOnClicks, createNewTaskOnClick};
