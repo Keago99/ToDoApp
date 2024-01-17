@@ -3,9 +3,48 @@ import { AllProjects } from "./projects";
 
 // A factory for Todo objects
 const toDoFactory = (title, description, dueDate, priority) => {
-    return {title, description, dueDate, priority};
     
-};
+
+    
+    // Getters and Setters to ensure encapsulation.
+    return {
+        set title(title){
+            this.title = title
+        },
+
+        get title(){
+            return title;
+        },
+
+        set description(description){
+            this.description = description;
+        },
+
+        get description(){
+            return description;
+        },
+
+        set dueDate(dueDate){
+            this.dueDate = dueDate;
+        },
+
+        get dueDate(){
+            return dueDate;
+        },
+
+        set priority(priority){
+            this.priority = priority;
+        },
+
+        get priority(){
+            return priority;
+        }
+
+    };
+
+
+    
+}
 
 
 //This function will automate creating a div for each task.
