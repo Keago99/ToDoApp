@@ -30,7 +30,6 @@ function createTask(){
     console.log(newTask);
     console.log(ActiveProject);
     AllProjects[ActiveProject].tasks.push(newTask);
-    console.log(AllProjects[ActiveProject].tasks[1]);
 }
 
 

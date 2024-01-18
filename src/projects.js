@@ -2,7 +2,7 @@ import {basicTodo} from "./toDos";
 
 const starterProject = new Project("starterProject");
 
-const AllProjects = [starterProject];
+let AllProjects = [starterProject];
 let ActiveProject  = 0;
 
 
@@ -17,8 +17,9 @@ function Project(projectName, tasks = []){
 function addProjects(){
     const inputText = document.getElementById("inputText").value;
     if (inputText != ""){
-        const addedProject = new Project(inputText);
+        let addedProject = new Project(inputText, new Array());
         AllProjects.push(addedProject);
+        console.log(AllProjects[ActiveProject].tasks[0]);
     }
 
 }
@@ -31,8 +32,8 @@ function activeOnClickProject(){
                 projectItems[i].classList.remove("activeProject");
             }
             projectItems[i].classList.add("activeProject");
-            ActiveProject = AllProjects[i];
-            console.log("The active project is number: " + [i]);
+            ActiveProject = i;
+            console.log("The active project is number: " + ActiveProject);
         })
     }
 }
@@ -57,6 +58,7 @@ function updateProjects(){
 function loadProjects(){
     AllProjects[ActiveProject].tasks.push(basicTodo);
     console.log("push successful")
+    console.log(ActiveProject);
     console.log(AllProjects[ActiveProject].tasks[0]);
 }
 
