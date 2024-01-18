@@ -30,7 +30,7 @@ function createTask(){
     console.log(newTask);
     console.log(ActiveProject);
     AllProjects[ActiveProject].tasks.push(newTask);
-    console.log(AllProjects[ActiveProject].tasks[0]);
+    console.log(AllProjects[ActiveProject].tasks[1]);
 }
 
 
@@ -43,7 +43,7 @@ function loadTasks(){
 
 
 
-const basicTodo = new toDo("my first Todo!", "This is an important task", "15/04/2025", "High");
+const basicTodo = new toDo("my first Todo!", "This is an important task", "2024-01-10", "High");
 
 
 export {toDo, createTask, basicTodo};

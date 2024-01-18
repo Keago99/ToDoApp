@@ -55,9 +55,9 @@ function updateProjects(){
 
 // A function to load the projects, it will reference the AllProjects Arraylist
 function loadProjects(){
-    console.log(basicTodo);
-    const wut = Array.isArray(AllProjects[0].tasks);
-    console.log(wut);
+    AllProjects[ActiveProject].tasks.push(basicTodo);
+    console.log("push successful")
+    console.log(AllProjects[ActiveProject].tasks[0]);
 }
 
 // A function to show the hidden project add form with its accept and cancel buttons
