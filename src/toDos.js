@@ -27,8 +27,6 @@ function createTask(){
     let priority = document.getElementById("Priority").innerText;
 
     const newTask = new toDo(title, description, dueDate, priority);
-    console.log(newTask);
-    console.log(ActiveProject);
     AllProjects[ActiveProject].tasks.push(newTask);
 }
 

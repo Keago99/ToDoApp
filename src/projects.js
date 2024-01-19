@@ -12,6 +12,12 @@ function Project(projectName, tasks = []){
     this.tasks = tasks;
 }
 
+function setInitialProject(){
+    const initialProject = document.getElementsByClassName("projItem");
+    initialProject[0].classList.add("activeProject");
+}
+
+
 
 // A function to add the projects to the AllProjects Arraylist
 function addProjects(){
@@ -47,6 +53,10 @@ function updateProjects(){
         let item = document.createElement("div");
         item.className = ("projItem");
         item.innerText = (AllProjects[i].projectName);
+        if(i == ActiveProject)
+        {
+            item.classList.add("activeProject");
+        }
 
         projList.appendChild(item);
 
@@ -57,8 +67,6 @@ function updateProjects(){
 // A function to load the projects, it will reference the AllProjects Arraylist
 function loadProjects(){
     AllProjects[ActiveProject].tasks.push(basicTodo);
-    console.log("push successful")
-    console.log(ActiveProject);
     console.log(AllProjects[ActiveProject].tasks[0]);
 }
 
@@ -118,4 +126,4 @@ function addProjectListenerButton(){
 
 
 
-export {activeOnClickProject, addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects, ActiveProject};
+export {setInitialProject, activeOnClickProject, addProjectListenerButton, projAdditionListeners, loadProjects, updateProjects, starterProject, AllProjects, ActiveProject};
