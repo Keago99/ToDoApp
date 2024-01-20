@@ -1,4 +1,4 @@
-import {basicTodo} from "./toDos";
+import {basicTodo, changeHeader} from "./toDos";
 
 const starterProject = new Project("starterProject");
 
@@ -38,6 +38,7 @@ function activeOnClickProject(){
                 projectItems[i].classList.remove("activeProject");
             }
             projectItems[i].classList.add("activeProject");
+            changeHeader();
             ActiveProject = i;
             console.log("The active project is number: " + ActiveProject);
         })
