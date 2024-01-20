@@ -18,7 +18,34 @@ function changeHeader(){
 }
 
 //This function will automate creating a div for each task.
-function createTaskDiv(){
+function createTaskDiv(title,dueDate,priority){
+    const toDoDiv = document.createElement("div");
+    const titleDisplay = document.createElement("div");
+    const detailButton = document.createElement("div");
+    const dateDisplay = document.createElement("div");
+    const priorityDisplay = document.createElement("div");
+
+    // The title display which will come first, not much to change here since its just text.
+    titleDisplay.innerText = title;
+    
+    // This will contain the html for button which will open a modal (doing this later)
+    detailButton.innerHTML = "";
+    
+    // This will contain the specific date, its already a string so we can just leave it as is
+    dateDisplay.innerHTML = dueDate;
+
+    // This will show a button with the priority on it, including the color
+    // Use a switch case since there are only three values (might make this its own method)
+    priorityDisplay.innerHTML = "";
+
+    // Then we append everything and send it off
+    toDoDiv.appendChild(titleDisplay, detailButton, dateDisplay, priorityDisplay);
+    return toDoDiv;
+}
+
+// A function that will loop through the Array and load all the tasks in the div using the "createTask"
+// function.
+function loadTasks(){
 
 }
 
@@ -37,11 +64,7 @@ function createTask(){
 }
 
 
-// A function that will loop through the Array and load all the tasks in the div using the "createTask"
-// function.
-function loadTasks(){
 
-}
 
 
 
