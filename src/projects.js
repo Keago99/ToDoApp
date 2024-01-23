@@ -1,4 +1,4 @@
-import {basicTodo, changeHeader} from "./toDos";
+import {basicTodo, changeHeader, loadTasks} from "./toDos";
 
 const starterProject = new Project("starterProject");
 
@@ -41,6 +41,7 @@ function activeOnClickProject(){
             changeHeader();
             ActiveProject = i;
             console.log("The active project is number: " + ActiveProject);
+            loadTasks();
         })
     }
 }
@@ -68,7 +69,7 @@ function updateProjects(){
 // A function to load the projects, it will reference the AllProjects Arraylist
 function loadProjects(){
     AllProjects[ActiveProject].tasks.push(basicTodo);
-    console.log(AllProjects[ActiveProject].tasks[0]);
+    console.log(AllProjects[ActiveProject].tasks[0].title);
 }
 
 // A function to show the hidden project add form with its accept and cancel buttons

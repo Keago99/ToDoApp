@@ -101,6 +101,9 @@
 }
 
 .toDoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     height: 45px;
     border: 3px dotted #F49F1C;
     width: 1100px;
@@ -115,5 +118,9 @@
 
 #todoHeader{
     text-align: center;
+}
+
+.toDoTaskButton{
+    margin: 0;
 }
 
