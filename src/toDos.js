@@ -57,6 +57,7 @@ function createTaskDiv(title,dueDate,priority){
 // function.
 function loadTasks(){
     const toDoList = document.getElementById("TodoList");
+    toDoList.innerHTML = "";
 
     for (let i = 0; i < AllProjects[ActiveProject].tasks.length; i++){
         const newTitle = (AllProjects[ActiveProject].tasks[i].title);
