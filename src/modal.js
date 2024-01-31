@@ -29,6 +29,16 @@ function addPriorityOnClicks(){
     }
 }
 
+function closeTitleAlertListener(){
+    const titleClose = document.getElementById("closeTitleAlertButton");
+    const titleAlert = document.getElementById("noTitleAlert");
+    
+
+    titleClose.addEventListener("click", () => {
+        titleAlert.id = "noTitleAlert";
+    })
+}
+
 function createNewTaskOnClick(){
     const createNewTaskButton = document.getElementById("createNewTask");
 
@@ -37,4 +47,4 @@ function createNewTaskOnClick(){
     })
 }
 
-export {addPriorityOnClicks, createNewTaskOnClick};
+export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener};
