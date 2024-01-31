@@ -75,13 +75,32 @@ function loadTasks(){
 // Creates a new task from the modal, this will actually be called in the modal class since it is tied to
 // that buttons logic, but because its primarily associated with the ToDo it will be housed here.
 function createTask(){
+    let modal = document.getElementById("exampleModal");
+    let trueModal = bootstrap.Modal.getInstance(modal);
+
+
     let title = document.getElementById("todoName").value;
     let description = document.getElementById("todoDescription").value;
     let dueDate = document.getElementById("todoDueDate").value;
     let priority = document.getElementById("Priority").innerText;
+    let noTitle = document.getElementById("noTitleAlert");
+    let noDescription = document.getElementById("noDescriptionAlert");
 
-    const newTask = new toDo(title, description, dueDate, priority);
-    AllProjects[ActiveProject].tasks.push(newTask);
+    // Checks if the title and description are blank before adding a new task.
+    if (title == ""){
+        noTitle.style.display = "block !important" ;
+        console.log("no title!");
+    }
+    else if (description == ""){
+        noDescription.style.display = "block !important";
+        console.log("no description!");
+    }
+    else{
+        const newTask = new toDo(title, description, dueDate, priority);
+        AllProjects[ActiveProject].tasks.push(newTask);
+        trueModal.hide();
+    }
+
 }
 
 

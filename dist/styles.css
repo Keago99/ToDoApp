@@ -124,3 +124,10 @@
     margin: 0;
 }
 
+#noTitleAlert{
+    display: none !important;
+}
+
+#noDescriptionAlert{
+    display: none !important;
+}

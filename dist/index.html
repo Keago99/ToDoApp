@@ -58,8 +58,22 @@
             <div class="modal-body">
                 <h5>Todo Name</h5>
                 <textarea class="form-control" id="todoName" rows="1"></textarea>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noTitleAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please enter a title for this new task!
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <h5>Todo Description</h5>
                 <textarea class="form-control" id="todoDescription" rows="1"></textarea>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noDescriptionAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please enter a description for this new task!
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <div class="edit-popup__date-title">Due Date:</div>
                 <input class="edit-popup__date-input" type="date" id ="todoDueDate" required="" value="2024-01-10">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Priority">
@@ -76,11 +90,13 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="createNewTask" data-bs-dismiss="modal">Create New Task</button>
+              <button type="button" class="btn btn-primary" id="createNewTask">Create New Task</button>
             </div>
           </div>
         </div>
       </div>
+
+
 
 </body>
 </html>
