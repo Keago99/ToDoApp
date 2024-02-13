@@ -84,13 +84,14 @@ function createTask(){
     let dueDate = document.getElementById("todoDueDate").value;
     let priority = document.getElementById("Priority").innerText;
     let noTitle = document.getElementById("noTitleAlert");
+    let noDescription = document.getElementById("noDescriptionAlert");
 
     // Checks if the title and description are blank before adding a new task.
     if (title == ""){
             noTitle.id = "show";
     }
     else if (description == ""){
-        console.log("no description!");
+        noDescription.id = "show";
     }
     else{
         const newTask = new toDo(title, description, dueDate, priority);

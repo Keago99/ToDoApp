@@ -1,6 +1,6 @@
 import {addPriorityOnClicks} from "./modal";
 import {setInitialProject, addProjectListenerButton, loadProjects, projAdditionListeners, updateProjects} from "./projects";
-import { createNewTaskOnClick, closeTitleAlertListener } from "./modal";
+import { createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener } from "./modal";
 import { loadTasks, changeHeader } from "./toDos";
 //This is the entry point
 
@@ -15,3 +15,4 @@ addProjectListenerButton();
 createNewTaskOnClick();
 changeHeader();
 closeTitleAlertListener();
+closeDescriptionAlertListener();

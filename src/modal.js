@@ -39,6 +39,16 @@ function closeTitleAlertListener(){
     })
 }
 
+function closeDescriptionAlertListener(){
+    const descClose = document.getElementById("closeDescriptionAlertButton");
+    const descAlert = document.getElementById("noDescriptionAlert");
+
+
+    descClose.addEventListener("click", () => {
+        descAlert.id = "noDescriptionAlert";
+    })
+}
+
 function createNewTaskOnClick(){
     const createNewTaskButton = document.getElementById("createNewTask");
 
@@ -47,4 +57,4 @@ function createNewTaskOnClick(){
     })
 }
 
-export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener};
+export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener};
