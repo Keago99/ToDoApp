@@ -96,7 +96,9 @@ function createTask(){
     else{
         const newTask = new toDo(title, description, dueDate, priority);
         AllProjects[ActiveProject].tasks.push(newTask);
+        loadTasks();
         trueModal.hide();
+
     }
 
 }
