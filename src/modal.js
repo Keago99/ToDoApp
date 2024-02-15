@@ -54,7 +54,24 @@ function createNewTaskOnClick(){
 
     createNewTaskButton.addEventListener("click", () => {
         createTask();
+        clearToDoModal();
     })
+}
+
+// Clears the modal for adding a new toDo modal
+function clearToDoModal(){
+    const title = document.getElementById("todoName");
+    const description = document.getElementById("todoDescription");
+    const noTitleAlert = document.getElementById("noTitleAlert");
+    const noDescAlert = document.getElementById("noDescriptionAlert");
+
+    // This clears the alerts for title and description
+    noTitleAlert.id = "noTitleAlert";
+    noDescAlert.id = "noDescriptionAlert";
+
+    // This clears the title box and the description box
+    title.value = "";
+    description.value = "";
 }
 
 export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener};
