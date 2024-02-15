@@ -64,6 +64,12 @@ function clearToDoModal(){
     const description = document.getElementById("todoDescription");
     const noTitleAlert = document.getElementById("noTitleAlert");
     const noDescAlert = document.getElementById("noDescriptionAlert");
+    const priority = document.getElementById("Priority");
+
+    priority.innerText = "Priorty";
+    priority.classList.replace("btn-secondary", "btn-secondary");
+    priority.classList.replace("btn-warning", "btn-secondary");
+    priority.classList.replace("btn-success", "btn-secondary");
 
     // This clears the alerts for title and description
     noTitleAlert.id = "noTitleAlert";
