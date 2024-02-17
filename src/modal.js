@@ -29,6 +29,15 @@ function addPriorityOnClicks(){
     }
 }
 
+function closeNoPriorityAlertListener(){
+    const priorityClose = document.getElementById("closeNoPriorityAlert");
+    const priorityAlert = document.getElementById("noPriorityAlert");
+
+    priorityClose.addEventListener("click", () => {
+        priorityAlert.id = "noPriorityAlert";
+    })
+}
+
 function closeTitleAlertListener(){
     const titleClose = document.getElementById("closeTitleAlertButton");
     const titleAlert = document.getElementById("noTitleAlert");
@@ -64,20 +73,23 @@ function clearToDoModal(){
     const description = document.getElementById("todoDescription");
     const noTitleAlert = document.getElementById("noTitleAlert");
     const noDescAlert = document.getElementById("noDescriptionAlert");
+    const noPriorityAlert =  document.getElementById("noPriorityAlert");
     const priority = document.getElementById("Priority");
 
-    priority.innerText = "Priorty";
-    priority.classList.replace("btn-secondary", "btn-secondary");
+
+    priority.innerText = "Priority:";
+    priority.classList.replace("btn-danger", "btn-secondary");
     priority.classList.replace("btn-warning", "btn-secondary");
     priority.classList.replace("btn-success", "btn-secondary");
 
     // This clears the alerts for title and description
     noTitleAlert.id = "noTitleAlert";
     noDescAlert.id = "noDescriptionAlert";
+    noPriorityAlert.id = "noPriorityAlert";
 
     // This clears the title box and the description box
     title.value = "";
     description.value = "";
 }
 
-export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener};
+export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener, closeNoPriorityAlertListener};

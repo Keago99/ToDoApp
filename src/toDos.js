@@ -82,10 +82,10 @@ function createTask(){
     let title = document.getElementById("todoName").value;
     let description = document.getElementById("todoDescription").value;
     let dueDate = document.getElementById("todoDueDate").value;
-    let priority = document.getElementById("Priority").innerText;
+    let priorityText = document.getElementById("Priority").innerText;
     let noTitle = document.getElementById("noTitleAlert");
     let noDescription = document.getElementById("noDescriptionAlert");
-
+    let noPriorityAlert = document.getElementById("noPriorityAlert");
     // Checks if the title and description are blank before adding a new task.
     if (title == ""){
             noTitle.id = "show";
@@ -93,8 +93,11 @@ function createTask(){
     else if (description == ""){
         noDescription.id = "show";
     }
+    else if (priorityText.trim() === "Priority:"){
+        noPriorityAlert.id = "show";
+    }
     else{
-        const newTask = new toDo(title, description, dueDate, priority);
+        const newTask = new toDo(title, description, dueDate, priorityText);
         AllProjects[ActiveProject].tasks.push(newTask);
         loadTasks();
         trueModal.hide();

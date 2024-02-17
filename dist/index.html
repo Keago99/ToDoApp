@@ -79,14 +79,20 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Priority">
                   Priority:
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item priorityClick lowPriority" id="lowPriority" href="#">Low</a></li>
-                  <li><a class="dropdown-item priorityClick mediumPriority" id="mediumPriority" href="#">Medium</a></li>
-                  <li><a class="dropdown-item priorityClick highPriority" id="highPriority" href="#">High</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-
+                <div>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item priorityClick lowPriority" id="lowPriority" href="#">Low</a></li>
+                    <li><a class="dropdown-item priorityClick mediumPriority" id="mediumPriority" href="#">Medium</a></li>
+                    <li><a class="dropdown-item priorityClick highPriority" id="highPriority" href="#">High</a></li>
+                  </ul>
+                </div>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noPriorityAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please select a priority for this task!
+                  </div>
+                  <button type="button" class="btn-close" id="closeNoPriorityAlert" ta-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

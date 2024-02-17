@@ -131,3 +131,7 @@
 #noDescriptionAlert{
     display: none !important;
 }
+
+#noPriorityAlert{
+    display: none !important;
+}
