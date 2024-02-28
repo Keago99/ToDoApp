@@ -119,6 +119,11 @@
     width: 300px;
 }
 
+.magnifyPicture{
+    height: 50px;
+    width: 50px;
+}
+
 #todoHeader{
     text-align: center;
 }

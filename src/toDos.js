@@ -36,7 +36,9 @@ function createTaskDiv(title,dueDate,priority){
     
     // This will contain the html for button which will open a modal (doing this later)
     detailButton.innerHTML = "<button type=\"button\"\
-     class=\"btn btn-primary\"> Details</button>";
+     class=\"btn btn-primary\"> Details\
+     <img src=\"../src/images/smallMagnifyingGlass.png\" class=\"magnifyPicture\" />\
+     </button>";
     
     // This will contain the specific date, its already a string so we can just leave it as is
     dateDisplay.innerHTML = dueDate;
