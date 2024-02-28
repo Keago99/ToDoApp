@@ -43,7 +43,7 @@ function createTaskDiv(title,dueDate,priority){
 
     // This will show a button with the priority on it, including the color
     // Use a switch case since there are only three values (might make this its own method)
-    priorityDisplay.innerHTML = priority;
+    priorityDisplay.innerHTML = priority + " priority";
 
     // Adding another class for spacing to each inner div.
     titleDisplay.classList.add("innerTodoDiv");
