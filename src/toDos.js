@@ -44,6 +44,18 @@ function createTaskDiv(title,dueDate,priority){
     // This will show a button with the priority on it, including the color
     // Use a switch case since there are only three values (might make this its own method)
     priorityDisplay.innerHTML = priority + " priority";
+    if (priorityDisplay.innerHTML === "Low priority"){
+        priorityDisplay.style.color = "#05EE53";
+    }
+    else if(priorityDisplay.innerHTML === "Medium priority"){
+        priorityDisplay.style.color = "yellow";
+    }
+    else if (priorityDisplay.innerHTML === "High priority"){
+        priorityDisplay.style.color = "red";
+        }
+    else{
+        console.log("this is nothing listed priority");
+    }
 
     // Adding another class for spacing to each inner div.
     titleDisplay.classList.add("innerTodoDiv");
