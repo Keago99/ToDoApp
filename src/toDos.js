@@ -45,6 +45,12 @@ function createTaskDiv(title,dueDate,priority){
     // Use a switch case since there are only three values (might make this its own method)
     priorityDisplay.innerHTML = priority;
 
+    // Adding another class for spacing to each inner div.
+    titleDisplay.classList.add("innerTodoDiv");
+    detailButton.classList.add("innerTodoDiv");
+    dateDisplay.classList.add("innerTodoDiv");
+    priorityDisplay.classList.add("innerTodoDiv");
+
     // Then we append everything and send it off
     toDoDiv.appendChild(titleDisplay);
     toDoDiv.appendChild(detailButton);
