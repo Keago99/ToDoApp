@@ -33,10 +33,11 @@ function createTaskDiv(title,dueDate,priority){
 
     // The title display which will come first, not much to change here since its just text.
     titleDisplay.innerText = title;
+    titleDisplay.classList.add("todoDivTitleStyle");
     
     // This will contain the html for button which will open a modal (doing this later)
     detailButton.innerHTML = "<button type=\"button\"\
-     class=\"btn btn-primary\"> Details\
+     class=\"btn btn-primary detailButton\"> Details\
      <img src=\"../src/images/smallMagnifyingGlass.png\" class=\"magnifyPicture\" />\
      </button>";
     
