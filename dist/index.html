@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> ToDo list!</title>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -101,7 +101,60 @@
           </div>
         </div>
       </div>
-
+      <!-- Second modal for description of each toDo, to be called on clicking the description button -->
+      <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="descriptionModalHeading">ToDo Description</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>Todo Name</h5>
+                <textarea class="form-control" id="todoName" rows="1"></textarea>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noTitleAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please enter a title for this new task!
+                  </div>
+                  <button type="button" class="btn-close" id="closeTitleAlertButton" aria-label="Close"></button>
+                </div>
+                <h5>Todo Description</h5>
+                <textarea class="form-control" id="todoDescription" rows="1"></textarea>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noDescriptionAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please enter a description for this new task!
+                  </div>
+                  <button type="button" class="btn-close" id="closeDescriptionAlertButton" ta-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="edit-popup__date-title">Due Date:</div>
+                <input class="edit-popup__date-input" type="date" id ="todoDueDate" required="" value="2024-01-10">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Priority">
+                  Priority:
+                </button>
+                <div>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item priorityClick lowPriority" id="lowPriority" href="#">Low</a></li>
+                    <li><a class="dropdown-item priorityClick mediumPriority" id="mediumPriority" href="#">Medium</a></li>
+                    <li><a class="dropdown-item priorityClick highPriority" id="highPriority" href="#">High</a></li>
+                  </ul>
+                </div>
+                <div class="alert alert-danger d-flex align-items-center" role="alert" id="noPriorityAlert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                    Please select a priority for this task!
+                  </div>
+                  <button type="button" class="btn-close" id="closeNoPriorityAlert" ta-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="createNewTask">Create New Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
 <!--Attribution stuff: 
 <a target="_blank" href="https://icons8.com/icon/JNzjznWAq3J5/search">Magnifying Glass</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
 
