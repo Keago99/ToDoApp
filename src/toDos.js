@@ -26,6 +26,7 @@ function createTaskDiv(title,dueDate,priority){
     const detailButton = document.createElement("div");
     const dateDisplay = document.createElement("div");
     const priorityDisplay = document.createElement("div");
+    const deleteButton = document.createElement("div");
 
     toDoDiv.classList.add("toDoDiv");
     detailButton.classList.add("toDoTaskButton");
@@ -60,17 +61,25 @@ function createTaskDiv(title,dueDate,priority){
         console.log("this is nothing listed priority");
     }
 
+    deleteButton.innerHTML = "<button type=\"button\"\
+    class=\"btn btn-primary detailButton\"> Delete\
+    <img src=\"../src/images/icons8-trash-can-64.png\" class=\"magnifyPicture\"/>\
+    </button>";
+
+
     // Adding another class for spacing to each inner div.
     titleDisplay.classList.add("innerTodoDiv");
     detailButton.classList.add("innerTodoDiv");
     dateDisplay.classList.add("innerTodoDiv");
     priorityDisplay.classList.add("innerTodoDiv");
+    deleteButton.classList.add("innerTodoDiv");
 
     // Then we append everything and send it off
     toDoDiv.appendChild(titleDisplay);
     toDoDiv.appendChild(detailButton);
     toDoDiv.appendChild(dateDisplay);
     toDoDiv.appendChild(priorityDisplay);
+    toDoDiv.appendChild(deleteButton);
     return toDoDiv;
 }
 
