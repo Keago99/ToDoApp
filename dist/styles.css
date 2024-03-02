@@ -103,6 +103,8 @@
 .toDoDiv{
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    align-items: center;
     height: 55px;
     border: 3px dotted #F49F1C;
     width: 1100px;
@@ -121,8 +123,7 @@
 
 .todoDivTitleStyle{
     display: flex;
-    justify-content: left;
-    align-items: center;
+
 }
 
 .innerTodoDiv{
