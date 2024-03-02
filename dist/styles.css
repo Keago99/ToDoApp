@@ -117,13 +117,8 @@
     padding-left: 30px;
 }
 
-.detailButton{
+.detailButton, .deleteButton{
     height: 40px;
-}
-
-.todoDivTitleStyle{
-    display: flex;
-
 }
 
 .innerTodoDiv{

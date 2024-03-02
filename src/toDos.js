@@ -1,4 +1,5 @@
 import { AllProjects, ActiveProject } from "./projects";
+import { populateTodoDetailModal } from "./modal";
 
 
 // Constructor for Todo
@@ -34,7 +35,6 @@ function createTaskDiv(title,dueDate,priority){
 
     // The title display which will come first, not much to change here since its just text.
     titleDisplay.innerText = title;
-    titleDisplay.classList.add("todoDivTitleStyle");
     
     // This will contain the html for button which will open a modal (doing this later)
     detailButton.innerHTML = "<button type=\"button\"\
@@ -62,13 +62,13 @@ function createTaskDiv(title,dueDate,priority){
     }
 
     deleteButton.innerHTML = "<button type=\"button\"\
-    class=\"btn btn-primary detailButton\"> Delete\
+    class=\"btn btn-primary deleteButton\"> Delete\
     <img src=\"../src/images/icons8-trash-can-64.png\" class=\"magnifyPicture\"/>\
     </button>";
 
 
     // Adding another class for spacing to each inner div.
-    titleDisplay.classList.add("innerTodoDiv");
+    titleDisplay.classList.add("innerTodoDiv", "titleDisplay");
     detailButton.classList.add("innerTodoDiv");
     dateDisplay.classList.add("innerTodoDiv");
     priorityDisplay.classList.add("innerTodoDiv");
@@ -96,7 +96,6 @@ function loadTasks(){
 
         const newTaskDiv = createTaskDiv(newTitle, newDueDate, newPriority);
         toDoList.appendChild(newTaskDiv);
-
     }
 }
 
@@ -130,6 +129,7 @@ function createTask(){
         const newTask = new toDo(title, description, dueDate, priorityText);
         AllProjects[ActiveProject].tasks.push(newTask);
         loadTasks();
+        populateTodoDetailModal();
         trueModal.hide();
 
     }

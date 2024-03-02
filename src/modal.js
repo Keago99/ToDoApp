@@ -92,4 +92,19 @@ function clearToDoModal(){
     description.value = "";
 }
 
-export {addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener, closeNoPriorityAlertListener};
+// A function that adds eventlisteners to the detailbuttons and poulates the modal
+function populateTodoDetailModal(){
+    // A collection of all title Divs
+    const divTitles = document.getElementsByClassName("titleDisplay");
+    const detailButtons = document.getElementsByClassName("detailButton");
+
+    for (let i = 0; i < detailButtons.length; i++)
+    {
+        detailButtons[i].addEventListener("click", (e) => {
+            console.log("This is the " + [i] + "th number details");
+            e.stopPropagation();
+        })
+    }
+}
+
+export {populateTodoDetailModal, addPriorityOnClicks, createNewTaskOnClick, closeTitleAlertListener, closeDescriptionAlertListener, closeNoPriorityAlertListener};
