@@ -97,6 +97,7 @@ function loadTasks(){
         const newTaskDiv = createTaskDiv(newTitle, newDueDate, newPriority);
         toDoList.appendChild(newTaskDiv);
     }
+    populateTodoDetailModal();
 }
 
 
@@ -129,7 +130,6 @@ function createTask(){
         const newTask = new toDo(title, description, dueDate, priorityText);
         AllProjects[ActiveProject].tasks.push(newTask);
         loadTasks();
-        populateTodoDetailModal();
         trueModal.hide();
 
     }

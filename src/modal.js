@@ -101,7 +101,8 @@ function populateTodoDetailModal(){
     for (let i = 0; i < detailButtons.length; i++)
     {
         detailButtons[i].addEventListener("click", (e) => {
-            console.log("This is the " + [i] + "th number details");
+            let currentTitle = divTitles[i].innerText;
+            console.log("This is the " + [i] + "th number details and the current title is " + currentTitle);
             e.stopPropagation();
         })
     }
