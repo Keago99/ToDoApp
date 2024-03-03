@@ -84,7 +84,7 @@
     background-color: #030E4F !important;;
 }
 
-#todoName{
+#todoName, #descriptionTodoName, #descriptionTodoArea{
     background-color:#030E4F !important;
     color:#ff9f0f;
 }

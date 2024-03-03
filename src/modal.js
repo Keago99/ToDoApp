@@ -1,5 +1,6 @@
 // This is where all the javascript relating to the modal will go.
 import {createTask} from "./toDos";
+import { ActiveProject, AllProjects } from "./projects";
 // Adds the onclick methods for the Modal items, specifically the "Low/Medium/High" priority
 function addPriorityOnClicks(){
     const priorityButton = document.getElementById("Priority");
@@ -94,15 +95,24 @@ function clearToDoModal(){
 
 // A function that adds eventlisteners to the detailbuttons and poulates the modal
 function populateTodoDetailModal(){
-    // A collection of all title Divs
+    // A collection of all todo Titles and detail buttons
     const divTitles = document.getElementsByClassName("titleDisplay");
     const detailButtons = document.getElementsByClassName("detailButton");
+    
+    // constants for the modal areas, this will be populated based on what the detail button clicks
+    const descTitle = document.getElementById("descriptionTodoName");
+    const descDescription = document.getElementById("descriptionTodoArea");
+
+    
 
     for (let i = 0; i < detailButtons.length; i++)
     {
         detailButtons[i].addEventListener("click", (e) => {
             let currentTitle = divTitles[i].innerText;
             console.log("This is the " + [i] + "th number details and the current title is " + currentTitle);
+            const searchIndex = AllProjects[ActiveProject].tasks.findIndex((toDo) => toDo.title== currentTitle);
+            descTitle.innerText = AllProjects[ActiveProject].tasks[searchIndex].title;
+            descDescription.innerText = AllProjects[ActiveProject].tasks[searchIndex].description;
             e.stopPropagation();
         })
     }

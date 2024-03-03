@@ -25,7 +25,6 @@ function addProjects(){
     if (inputText != ""){
         let addedProject = new Project(inputText, new Array());
         AllProjects.push(addedProject);
-        console.log(AllProjects[ActiveProject].tasks[0]);
     }
 
 }
