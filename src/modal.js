@@ -102,6 +102,8 @@ function populateTodoDetailModal(){
     // constants for the modal areas, this will be populated based on what the detail button clicks
     const descTitle = document.getElementById("descriptionTodoName");
     const descDescription = document.getElementById("descriptionTodoArea");
+    const dueDate = document.getElementById("descTodoDate");
+
 
     
 
@@ -113,6 +115,7 @@ function populateTodoDetailModal(){
             const searchIndex = AllProjects[ActiveProject].tasks.findIndex((toDo) => toDo.title== currentTitle);
             descTitle.innerText = AllProjects[ActiveProject].tasks[searchIndex].title;
             descDescription.innerText = AllProjects[ActiveProject].tasks[searchIndex].description;
+            dueDate.value = AllProjects[ActiveProject].tasks[searchIndex].dueDate;
             e.stopPropagation();
         })
     }
